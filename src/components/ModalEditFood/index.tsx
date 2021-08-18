@@ -18,12 +18,11 @@ interface IFoodPlate {
 interface IModalProps {
   isOpen: boolean;
   setIsOpen: () => void;
-  handleUpdateFood: (food: Omit<IFoodPlate, 'available'>) => void;
+  handleUpdateFood: (food: Omit<IFoodPlate, 'id' | 'available'>) => void;
   editingFood: IFoodPlate;
 }
 
 interface IEditFoodData {
-  id: number;
   name: string;
   image: string;
   price: string;
